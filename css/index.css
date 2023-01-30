@@ -242,7 +242,7 @@ body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
 .maincontent-wrap {
   width: 100%;
   height: 700px;
-  background-image: url(/images/mainvisual.png);
+  background-image: url(../images/mainvisual.png);
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -429,16 +429,16 @@ body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
   filter: blur(20px);
 }
 .recom .recom-wrap .content .s-content .img1 {
-  background-image: url(/images/recom1.png);
+  background-image: url(../images/recom1.png);
 }
 .recom .recom-wrap .content .s-content .img2 {
-  background-image: url(/images/recom2.png);
+  background-image: url(../images/recom2.png);
 }
 .recom .recom-wrap .content .s-content .img3 {
-  background-image: url(/images/recom3.png);
+  background-image: url(../images/recom3.png);
 }
 .recom .recom-wrap .content .s-content .img4 {
-  background-image: url(/images/recom4.png);
+  background-image: url(../images/recom4.png);
 }
 .recom .recom-wrap .content h3, .recom .recom-wrap .content p {
   filter: drop-shadow(0 0 0.4rem rgba(142, 142, 142, 0.5));
@@ -492,20 +492,20 @@ body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
   height: 400px;
   box-shadow: 5px 5px 5px 1px rgba(73, 73, 73, 0.1);
   margin-top: 16px;
-  background-image: url(/images/global1.png);
+  background-image: url(../images/global1.png);
   background-position: center center;
   position: relative;
   overflow: hidden;
   cursor: pointer;
 }
 .globalchart .global-wrap .content:nth-child(2) {
-  background-image: url(/images/global2.png);
+  background-image: url(../images/global2.png);
 }
 .globalchart .global-wrap .content:nth-child(3) {
-  background-image: url(/images/global3.png);
+  background-image: url(../images/global3.png);
 }
 .globalchart .global-wrap .content:nth-child(4) {
-  background-image: url(/images/global4.png);
+  background-image: url(../images/global4.png);
 }
 .globalchart .global-wrap .content .title {
   position: absolute;
@@ -590,11 +590,11 @@ body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
 }
 .playlist .playlist-wrap .left .content:nth-child(1) {
   margin-bottom: 10px;
-  background-image: url(/images/playlist1.png);
+  background-image: url(../images/playlist1.png);
   background-position: center center;
 }
 .playlist .playlist-wrap .left .content:nth-child(2) {
-  background-image: url(/images/playlist3.png);
+  background-image: url(../images/playlist3.png);
   background-position: center center;
 }
 .playlist .playlist-wrap .left .content:hover {
@@ -606,7 +606,7 @@ body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  background-image: url(/images/playlist2.png);
+  background-image: url(../images/playlist2.png);
   margin: 0 10px;
 }
 .playlist .playlist-wrap .center:hover {
@@ -628,11 +628,11 @@ body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
 }
 .playlist .playlist-wrap .right .content:nth-child(1) {
   margin-bottom: 10px;
-  background-image: url(/images/playlist4.png);
+  background-image: url(../images/playlist4.png);
   background-position: bottom center;
 }
 .playlist .playlist-wrap .right .content:nth-child(2) {
-  background-image: url(/images/playlist5.png);
+  background-image: url(../images/playlist5.png);
   background-position: top center;
 }
 .playlist .playlist-wrap .right .content:hover {
