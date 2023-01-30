@@ -256,7 +256,7 @@ body{
     &-wrap{
         width: 100%;
         height: 700px;
-        background-image: url(/images/mainvisual.png);
+        background-image: url(../images/mainvisual.png);
         background-position: center center;
         background-size: cover;
         position: relative;
@@ -446,16 +446,16 @@ body{
                     filter: blur(20px);
                 }
                 .img1{
-                    background-image: url(/images/recom1.png);
+                    background-image: url(../images/recom1.png);
                 }
                 .img2{
-                    background-image: url(/images/recom2.png);
+                    background-image: url(../images/recom2.png);
                 }
                 .img3{
-                    background-image: url(/images/recom3.png);
+                    background-image: url(../images/recom3.png);
                 }
                 .img4{
-                    background-image: url(/images/recom4.png);
+                    background-image: url(../images/recom4.png);
                 }
                 }
                 h3,p{
@@ -512,14 +512,14 @@ body{
                 height: 400px;
                 box-shadow: 5px 5px 5px 1px rgba(73, 73, 73, 0.1);
                 margin-top: 16px;
-                background-image: url(/images/global1.png);
+                background-image: url(../images/global1.png);
                 background-position: center center;
                 position: relative;
                 overflow: hidden;
                 cursor: pointer;
-                &:nth-child(2){background-image: url(/images/global2.png);}
-                &:nth-child(3){background-image: url(/images/global3.png);}
-                &:nth-child(4){background-image: url(/images/global4.png);}
+                &:nth-child(2){background-image: url(../images/global2.png);}
+                &:nth-child(3){background-image: url(../images/global3.png);}
+                &:nth-child(4){background-image: url(../images/global4.png);}
                 .title{
                     position: absolute;
                     background-color: #fff;
@@ -604,11 +604,11 @@ body{
                 .content{
                     &:nth-child(1){
                         margin-bottom: 10px;
-                        background-image: url(/images/playlist1.png);
+                        background-image: url(../images/playlist1.png);
                         background-position: center center;
                     }
                     &:nth-child(2){
-                        background-image: url(/images/playlist3.png);
+                        background-image: url(../images/playlist3.png);
                         background-position: center center;
                     }
                     &:hover{
@@ -622,7 +622,7 @@ body{
                 border-radius: 10px;
                 position: relative;
                 overflow: hidden;
-                background-image: url(/images/playlist2.png);
+                background-image: url(../images/playlist2.png);
                 margin: 0 10px;
                 &:hover{
                     transform: translateY(-5px);
@@ -643,11 +643,11 @@ body{
                 .content{
                     &:nth-child(1){
                         margin-bottom: 10px;
-                        background-image: url(/images/playlist4.png);
+                        background-image: url(../images/playlist4.png);
                         background-position: bottom center;
                     }
                     &:nth-child(2){
-                        background-image: url(/images/playlist5.png);
+                        background-image: url(../images/playlist5.png);
                         background-position: top center;
                     }
                     &:hover{
