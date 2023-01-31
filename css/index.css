@@ -822,6 +822,7 @@ body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
   width: 100%;
   height: 450px;
   margin-top: 30px;
+  display: none;
 }
 .magazine-wrap .magazine-content .swiper-wrapper .swiper-slide {
   display: flex;

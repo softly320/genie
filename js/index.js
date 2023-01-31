@@ -83,32 +83,78 @@ $(document).ready(function () {
             depth: 400,
             modifier: 3,
             slideShadows: true,
-        },
-        // mousewheel:{
-        //     invert: true
-        // }
+        }
     })
 
-    const swiper2 = new Swiper(".magazine-content",{
+
+
+
+
+
+    
+    const $magazine_nav = $(".magazine ul li")
+    const $magazine = $(".magazine .magazine-content")
+
+    $magazine.eq(0).show()
+
+    function swiper_slide(id, option){
+        const swiper2 = new Swiper(id,option)
+    }
+
+
+    swiper_slide(".ma1", {
+        loop: true,
         autoplay: {
             delay: 2500,
-            disableOnInteraction: false
+            disableOnInteraction: false,
         },
-        loop: true,
         slidesPerView: 1,
         centeredSlides: true,
         spaceBetween: 10,
         pagination:{
-            el: ".swiper-pagination"
-        }
+            el: ".swiper-pagination",
+            clickable: true
+        },
+        observer: true,
+        observeParents: true
     })
 
-    $('.swiper-slide').on('mouseover', function(){
-        swiper.autoplay.stop();
-    });
-    $('.swiper-slide').on('mouseout', function(){
-        swiper.autoplay.start();
-    });
+    
+
+    $magazine_nav.click(function(){
+        let i = $(this).index()
+        swiper.destroy();
+        $magazine_nav.removeClass("on").eq(i).addClass("on")
+        $magazine.hide().eq(i).show();
+        swiper_slide(".ma"+(i+1), {
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            slidesPerView: 1,
+            centeredSlides: true,
+            spaceBetween: 10,
+            pagination:{
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            observer: true,
+            observeParents: true
+        })
+        
+    })
+
+
+
+
+
+    // $('.swiper-slide').on('mouseover', function(){
+    //     swiper.autoplay.stop();
+    // });
+    // $('.swiper-slide').on('mouseout', function(){
+    //     swiper.autoplay.start();
+    // });
 
 
 
