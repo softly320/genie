@@ -1010,8 +1010,8 @@ body .header .header-wrap .etc span:nth-child(2) {
     display: none;
   }
   body .sub-menu {
-    width: 100%;
-    left: -100%;
+    width: 50%;
+    left: -50%;
   }
   body .recom .recom-wrap {
     flex-wrap: wrap;
@@ -1223,6 +1223,10 @@ body .header .header-wrap .etc span:nth-child(2) {
   }
 }
 @media (max-width: 640px) {
+  body .sub-menu {
+    width: 100%;
+    left: -100%;
+  }
   body .ad {
     display: none;
   }

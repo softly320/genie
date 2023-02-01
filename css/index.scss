@@ -1047,8 +1047,8 @@ body{
             }
         }
         .sub-menu{
-            width: 100%;
-            left: -100%;
+            width: 50%;
+            left: -50%;
         }
         .recom{
             .recom-wrap{
@@ -1301,6 +1301,10 @@ body{
     }
 
     @include media("(max-width: 640px)"){
+        .sub-menu{
+            width: 100%;
+            left: -100%;
+        }
         .ad{
             display: none;
         }
