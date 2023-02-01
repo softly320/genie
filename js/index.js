@@ -23,6 +23,10 @@ $(document).ready(function () {
             $(".popup, .popup-btn").show()
             $(".top-btn").hide()
         }
+        if($(window).width() < 767){
+            $(".popup, .popup-btn").hide()
+        }
+
     })
 
     $(".top-btn").click(function(){
@@ -196,6 +200,7 @@ $(document).ready(function () {
         $(".nowchart .nowchart-wrap .slide .title ul li").removeClass("on").eq(idx).addClass("on")
         $(".nowchart .nowchart-wrap .slide > ul > li").hide().eq(idx).show()
     }, 3000)
+
 
 
 

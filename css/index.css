@@ -49,9 +49,6 @@ body::-webkit-scrollbar-track {
   color: #fff;
 }
 
-body {
-  overflow-x: hidden;
-}
 body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
   filter: blur(1px);
 }
@@ -102,13 +99,43 @@ body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
   border: 1px solid #ddd;
   border-radius: 20px;
   padding: 8px 30px;
+  position: relative;
 }
-.header .header-wrap .search p {
-  color: #a1a1a1;
-  font-size: 0.9em;
+.header .header-wrap .search::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/icon_search.png");
+  position: absolute;
+  right: 20px;
+  background-repeat: no-repeat;
+  top: 50%;
+  transform: translateY(-50%);
+  background-size: cover;
 }
-.header .header-wrap .search a {
+.header .header-wrap .search input {
+  width: 100%;
+  height: 100%;
+  padding-left: 25px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  color: #272727;
+}
+.header .header-wrap .search input::-moz-placeholder {
+  font-size: 16px;
   color: #a1a1a1;
+  letter-spacing: -1px;
+}
+.header .header-wrap .search input:-ms-input-placeholder {
+  font-size: 16px;
+  color: #a1a1a1;
+  letter-spacing: -1px;
+}
+.header .header-wrap .search input::placeholder {
+  font-size: 16px;
+  color: #a1a1a1;
+  letter-spacing: -1px;
 }
 .header .header-wrap .etc {
   flex-basis: 30%;
@@ -240,12 +267,14 @@ body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
   width: 100%;
 }
 .maincontent-wrap {
-  width: 100%;
+  max-width: 100%;
   height: 700px;
+  top: 84px;
   background-image: url(../images/mainvisual.png);
   background-position: center center;
   background-size: cover;
   position: relative;
+  overflow: hidden;
 }
 .maincontent-wrap .text {
   position: absolute;
@@ -536,6 +565,7 @@ body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
 }
 .globalchart .global-wrap .content .title span {
   font-family: "GmarketSansMedium";
+  margin-left: 3px;
   color: #a1a1a1;
   flex-basis: 30%;
   white-space: nowrap;
@@ -888,6 +918,7 @@ body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
   border-radius: 50%;
   box-sizing: border-box;
   padding: 20px 25px;
+  z-index: 9999999;
   cursor: pointer;
   filter: drop-shadow(0 0 0.4rem rgba(142, 142, 142, 0.2));
 }
@@ -921,20 +952,46 @@ body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
   body .recom h3 {
     font-size: 1.7em;
   }
+  body .magazine-wrap .menu {
+    flex-wrap: wrap;
+  }
+  body .magazine-wrap .menu h3 {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
   body .magazine-wrap .menu ul {
-    flex-basis: 30%;
+    flex-basis: 40%;
+    margin: 0 auto;
   }
   body .magazine-wrap .menu ul li:not(:last-child)::after {
-    right: -12px;
+    left: -10px;
+  }
+  body .magazine-wrap .menu ul li a {
+    font-size: 18px;
   }
   body .magazine .swiper-horizontal > .swiper-pagination-bullets, body .magazine .swiper-pagination-bullets.swiper-pagination-horizontal, body .magazine .swiper-pagination-custom, body .magazine .swiper-pagination-fraction {
-    left: 440px;
+    left: 40%;
   }
   body .footer-wrap .top .sns {
     flex-basis: 15%;
   }
+  body .video {
+    margin-top: 100px;
+  }
+  body .video .swiper .swiper-wrapper .swiper-slide {
+    width: 700px;
+    height: 400px;
+  }
+  body .video .swiper .swiper-wrapper .swiper-slide .text p {
+    width: 80%;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
-@media (min-width: 641px) and (max-width: 1200px) {
+@media (max-width: 1000px) {
   body .header .header-wrap .nav {
     margin-left: 20px;
   }
@@ -970,21 +1027,21 @@ body .header .header-wrap .etc span:nth-child(2) {
     display: none;
   }
   body .recom .recom-wrap .content .m-content {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     margin-top: 10px;
   }
   body .recom .recom-wrap .content .s-content {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
   }
   body .recom .recom-wrap .content .s-content h3 {
-    top: 40%;
-    font-size: 1.5em;
+    top: 35%;
+    font-size: 1.1em;
   }
   body .recom .recom-wrap .content .s-content p {
     top: 55%;
-    font-size: 1.3em;
+    font-size: 1em;
     width: 300px;
   }
   body .nowchart .nowchart-wrap .slide {
@@ -1034,6 +1091,7 @@ body .header .header-wrap .etc span:nth-child(2) {
   }
   body .ad {
     justify-content: center;
+    padding: 20px 0;
   }
   body .ad .left {
     flex-basis: 98%;
@@ -1042,7 +1100,12 @@ body .header .header-wrap .etc span:nth-child(2) {
     flex-basis: 90%;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    height: 50px;
     padding: 20px;
+  }
+  body .ad .right p, body .ad .right span {
+    margin: 0;
   }
   body .magazine .magazine-wrap .menu h3 {
     font-size: 1.5em;
@@ -1099,12 +1162,14 @@ body .header .header-wrap .etc span:nth-child(2) {
     width: 100%;
   }
   body .magazine .swiper-horizontal > .swiper-pagination-bullets, body .magazine .swiper-pagination-bullets.swiper-pagination-horizontal, body .magazine .swiper-pagination-custom, body .magazine .swiper-pagination-fraction {
-    bottom: 400px;
-    left: 300px;
+    bottom: 88%;
+    left: 40%;
   }
   body .footer .footer-wrap {
     display: flex;
     flex-wrap: wrap;
+    padding: 30px 0;
+    max-width: 80%;
   }
   body .footer .footer-wrap .top {
     flex-basis: 100%;
@@ -1129,12 +1194,39 @@ body .header .header-wrap .etc span:nth-child(2) {
   }
   body .footer .footer-wrap .bottom a {
     flex-basis: 100%;
+    position: relative;
+    margin-top: 20px;
   }
   body .footer .footer-wrap .bottom a img {
     transform: scale(1.5);
   }
+  body .footer .footer-wrap .bottom a::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    background-color: rgba(161, 161, 161, 0.3);
+    left: 34%;
+    top: -24px;
+  }
   body .footer .footer-wrap .bottom p {
     flex-basis: 100%;
     margin-top: 40px;
+  }
+}
+@media (max-width: 800px) {
+  body .recom .recom-wrap .content:nth-child(3n+1) {
+    display: none;
+  }
+  body .globalchart {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 640px) {
+  body .ad {
+    display: none;
+  }
+  body .magazine {
+    margin-top: 100px;
   }
 }
