@@ -127,11 +127,6 @@ body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
   color: #a1a1a1;
   letter-spacing: -1px;
 }
-.header .header-wrap .search input:-ms-input-placeholder {
-  font-size: 16px;
-  color: #a1a1a1;
-  letter-spacing: -1px;
-}
 .header .header-wrap .search input::placeholder {
   font-size: 16px;
   color: #a1a1a1;
@@ -200,11 +195,12 @@ body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
 .popup {
   width: 100%;
   z-index: 1500;
+  background-color: #1c3122;
 }
 .popup .popup-content {
   padding: 20px;
-  width: 100%;
-  background-color: #1c3122;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -678,6 +674,7 @@ body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
 }
 .footer .footer-wrap {
   max-width: 1200px;
+  overflow: hidden;
   margin: 0 auto;
   padding: 30px 50px 50px;
 }
@@ -780,6 +777,10 @@ body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
   width: 230px;
   height: 150px;
   background-color: #a1a1a1;
+  overflow: hidden;
+}
+.ad .left .img img {
+  width: 100%;
 }
 .ad .left .text {
   margin-left: 30px;
@@ -1006,7 +1007,7 @@ body.on > div:not(.header, .popup, .sub-menu, .top-btn) {
     justify-content: end;
   }
   body .header .header-wrap .etc span:nth-child(1),
-body .header .header-wrap .etc span:nth-child(2) {
+  body .header .header-wrap .etc span:nth-child(2) {
     display: none;
   }
   body .sub-menu {

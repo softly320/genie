@@ -202,10 +202,11 @@ body{
 .popup{
     width: 100%;
     z-index: 1500;
+    background-color: #1c3122;
     .popup-content{
         padding: 20px;
-        width: 100%;
-        background-color: #1c3122;
+        max-width: 1200px;
+        margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -681,6 +682,7 @@ body{
         background-color: $gray;
         .footer-wrap{
             max-width: 1200px;
+            overflow: hidden;
             margin: 0 auto;
             padding: 30px 50px 50px;
         }
@@ -787,6 +789,8 @@ body{
                 width: 230px;
                 height: 150px;
                 background-color: $lgary;
+                overflow: hidden;
+                img{width: 100%;}
             }
             .text{
                 margin-left: 30px;
